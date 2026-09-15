@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mantenimiento Eléctrico, Electrobombas y Redes | Servicio Técnico Especializado Perú</title>
+    <meta name="description" content="Mantenimiento especializado de tableros eléctricos, electrobombas, sistemas de presión constante e instalaciones de redes ethernet para edificios y empresas en Perú.">
+    <meta name="keywords" content="mantenimiento electrobombas lima, tableros electricos peru, presion constante edificios, instalaciones electricas lima, cableado estructurado peru">
+    
+    <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#0f2b5c',
+                            950: '#0b192c',
+                        },
+                        accent: {
+                            green: '#22c55e',
+                            greenHover: '#16a34a',
+                            dark: '#1f2937',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 4s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-8px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-header {
+            background: rgba(15, 43, 92, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #0b192c 0%, #0f2b5c 50%, #1e40af 100%);
+        }
+        .card-hover-effect {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover-effect:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 25px -5px rgba(15, 43, 92, 0.1), 0 8px 10px -6px rgba(15, 43, 92, 0.05);
+        }
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #94a3b8;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0f2b5c;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-body antialiased selection:bg-brand-600 selection:text-white pb-16 md:pb-0">
+
+    <!-- TOP BAR DE EMERGENCIA / NORMAS -->
+    <div class="bg-brand-950 text-slate-300 text-xs py-2 px-4 border-b border-brand-900">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left">
+            <div class="flex items-center gap-2">
+                <span class="inline-block w-2 h-2 rounded-full bg-accent-green animate-pulse"></span>
+                <span class="font-medium text-white">Atención Inmediata en Lima y Provincias</span>
+                <span class="hidden md:inline text-slate-400">| Diagnóstico y mantenimiento especializado en campo</span>
+            </div>
+            <div class="flex items-center gap-4 text-xs">
+                <span class="flex items-center gap-1">
+                    <svg class="w-3.5 h-3.5 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    Normas CNE Cumplidas
+                </span>
+                <span class="flex items-center gap-1">
+                    <svg class="w-3.5 h-3.5 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    Respuesta Rápida 24/7
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR HEADER -->
+    <header class="sticky top-0 z-40 glass-header text-white shadow-lg transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- LOGO BRAND -->
+                <a href="#" class="flex items-center group">
+                    <img src="logo.png" alt="Logo HidroFlux Perú" class="h-12 w-auto object-contain mr-3">
+                    <div>
+                        <span class="font-extrabold text-xl tracking-tight text-white block leading-tight font-sans">HidroFlux <span class="text-brand-500">Perú</span></span>
+                        <span class="text-[10px] text-slate-300 font-medium tracking-wider uppercase block">Soluciones Eléctricas & Redes</span>
+                    </div>
+                </a>
+
+                <!-- DESKTOP NAVIGATION LINKS -->
+                <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-200">
+                    <a href="#a-quien-ayudamos" class="hover:text-white transition-colors">¿A quién ayudamos?</a>
+                    <a href="#servicios" class="hover:text-white transition-colors">Nuestros Servicios</a>
+                    <a href="#metodo" class="hover:text-white transition-colors">Método de Trabajo</a>
+                    <a href="#experiencia" class="hover:text-white transition-colors">Garantía Técnica</a>
+                </nav>
+
+                <!-- HEADER CTA BUTTON -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <a href="https://wa.me/51999999999?text=Hola,%20vi%20su%20p%C3%A1gina%20web.%20Necesito%20una%20visita%20t%C3%A9cnica." 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="inline-flex items-center justify-center gap-2 bg-accent-green hover:bg-accent-greenHover text-white px-5 py-2.5 rounded-xl font-bold text-sm shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                        <span>WhatsApp Directo</span>
+                    </a>
+                </div>
+
+                <!-- MOBILE MENU TOGGLE BUTTON -->
+                <button id="mobileMenuBtn" aria-label="Abrir menú" class="lg:hidden p-2 text-slate-300 hover:text-white focus:outline-none">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path id="menuIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- MOBILE MENU DROPDOWN -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-brand-950/95 border-b border-brand-800 backdrop-blur-md">
+            <div class="px-4 pt-3 pb-6 space-y-3 text-center sm:text-left">
+                <a href="#a-quien-ayudamos" class="mobile-nav-link block py-2 text-slate-200 hover:text-white font-medium">¿A quién ayudamos?</a>
+                <a href="#servicios" class="mobile-nav-link block py-2 text-slate-200 hover:text-white font-medium">Nuestros Servicios</a>
+                <a href="#metodo" class="mobile-nav-link block py-2 text-slate-200 hover:text-white font-medium">Método de Trabajo</a>
+                <a href="#experiencia" class="mobile-nav-link block py-2 text-slate-200 hover:text-white font-medium">Garantía Técnica</a>
+                <div class="pt-2">
+                    <a href="https://wa.me/51999999999?text=Hola,%20vi%20su%20p%C3%A1gina%20web.%20Necesito%20una%20visita%20t%C3%A9cnica." 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="w-full inline-flex items-center justify-center gap-2 bg-accent-green hover:bg-accent-greenHover text-white px-5 py-3 rounded-xl font-bold text-base shadow-md">
+                        <span>📲 Agendar Visita Técnica</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. HEADER / HERO SECTION -->
+        <section class="hero-gradient text-white relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28 border-b border-brand-900">
+            <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-brand-500/20 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-accent-green/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    
+                    <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                        
+                        <div class="inline-flex items-center gap-2 bg-brand-800/60 border border-brand-500/30 text-brand-100 text-xs sm:text-sm px-4 py-1.5 rounded-full backdrop-blur-sm">
+                            <span class="text-amber-400">⚡</span>
+                            <span class="font-semibold">Servicio Técnico Profesional en Lima y Provincias</span>
+                        </div>
+
+                        <!-- H1 Exact Text Requirement -->
+                        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight sm:leading-tight">
+                            Mantenimiento Especializado de Tableros, Electrobombas y Soluciones Eléctricas.
+                        </h1>
+
+                        <!-- Mensaje Central (Subtítulo) Exact Text Requirement -->
+                        <p class="text-lg sm:text-xl text-slate-200 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                            "Garantizamos la presión de agua en tu edificio y optimizamos tus equipos industriales sin fallas sorpresivas."
+                        </p>
+
+                        <div class="pt-4 space-y-3">
+                            <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                                <!-- Botón (CTA) Exact Text Requirement -->
+                                <a href="https://wa.me/51999999999?text=Hola,%20vi%20su%20p%C3%A1gina%20web.%20Necesito%20una%20visita%20t%C3%A9cnica." 
+                                   target="_blank" 
+                                   rel="noopener noreferrer"
+                                   class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-accent-green hover:bg-accent-greenHover text-white px-8 py-4 rounded-xl font-extrabold text-lg shadow-xl shadow-accent-green/20 hover:shadow-accent-green/30 transition-all transform hover:-translate-y-1 active:translate-y-0">
+                                    <span>📲 Agendar Visita Técnica</span>
+                                </a>
+                            </div>
+
+                            <!-- Texto pequeño bajo el botón Exact Text Requirement -->
+                            <p class="text-xs sm:text-sm text-slate-300 italic max-w-xl mx-auto lg:mx-0">
+                                *Evaluación y diagnóstico en campo adaptado a los horarios de tu edificio o empresa.*
+                            </p>
+                        </div>
+
+                        <div class="pt-6 grid grid-cols-3 gap-3 border-t border-brand-800/80 max-w-lg mx-auto lg:mx-0 text-left">
+                            <div class="flex items-center gap-2">
+                                <div class="w-8 h-8 rounded-lg bg-brand-800/80 flex items-center justify-center text-accent-green shrink-0">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                </div>
+                                <span class="text-xs font-semibold text-slate-200">100% Trabajo Garantizado</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <div class="w-8 h-8 rounded-lg bg-brand-800/80 flex items-center justify-center text-accent-green shrink-0">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                </div>
+                                <span class="text-xs font-semibold text-slate-200">Visitas Programadas</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <div class="w-8 h-8 rounded-lg bg-brand-800/80 flex items-center justify-center text-accent-green shrink-0">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                                </div>
+                                <span class="text-xs font-semibold text-slate-200">Ingeniero & Técnico Titulado</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Right Hero Visual Card -->
+                    <div class="lg:col-span-5">
+                        <div class="relative mx-auto max-w-md lg:max-w-none">
+                            <div class="absolute -inset-1 bg-gradient-to-r from-brand-500 to-accent-green rounded-2xl blur opacity-30 animate-pulse-slow"></div>
+                            
+                            <div class="relative bg-brand-950/90 border border-brand-800 rounded-2xl p-6 sm:p-8 shadow-2xl text-slate-100">
+                                <div class="flex items-center justify-between pb-6 border-b border-brand-800">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-3 h-3 rounded-full bg-accent-green animate-ping"></div>
+                                        <span class="font-bold text-sm tracking-wide uppercase text-slate-300">Centro de Operaciones Técnico</span>
+                                    </div>
+                                    <span class="bg-brand-800 text-brand-200 text-xs px-2.5 py-1 rounded font-mono">LIMA METROPOLITANA</span>
+                                </div>
+
+                                <div class="py-6 space-y-4">
+                                    <div class="bg-brand-900/60 p-4 rounded-xl border border-brand-800 flex items-start gap-3">
+                                        <div class="p-2 bg-brand-600/30 rounded-lg text-brand-400 shrink-0">
+                                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-sm text-white">Sistemas de Presión Constante</h4>
+                                            <p class="text-xs text-slate-300 mt-0.5">Calibración de variadores de frecuencia y bombas hidráulicas para cero fluctuaciones de agua.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="bg-brand-900/60 p-4 rounded-xl border border-brand-800 flex items-start gap-3">
+                                        <div class="p-2 bg-brand-600/30 rounded-lg text-brand-400 shrink-0">
+                                            <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-sm text-white">Tableros de Fuerza y Control</h4>
+                                            <p class="text-xs text-slate-300 mt-0.5">Mantenimiento preventivo contra sobrecargas, cortocircuitos y fallas en contactores.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="bg-brand-900/60 p-4 rounded-xl border border-brand-800 flex items-start gap-3">
+                                        <div class="p-2 bg-brand-600/30 rounded-lg text-brand-400 shrink-0">
+                                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-sm text-white">Redes Ethernet Estables</h4>
+                                            <p class="text-xs text-slate-300 mt-0.5">Cableado estructurado industrial y comercial libre de interferencias o caídas de red.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="pt-4 border-t border-brand-800 text-center">
+                                    <p class="text-xs text-slate-400">¿Tienes una consulta urgente sobre tu edificio o empresa?</p>
+                                    <a href="https://wa.me/51999999999?text=Hola,%20vi%20su%20p%C3%A1gina%20web.%20Necesito%20una%20visita%20t%C3%A9cnica." 
+                                       target="_blank" 
+                                       rel="noopener noreferrer"
+                                       class="inline-block mt-2 text-xs font-bold text-accent-green hover:underline">
+                                        Consultar por WhatsApp inmediatamente &rarr;
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. SECCIÓN: ¿A QUIÉN AYUDAMOS? (Dividido en 2 columnas o tarjetas) -->
+        <section id="a-quien-ayudamos" class="py-16 sm:py-24 bg-slate-100/70 border-b border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <span class="text-brand-800 font-extrabold text-xs sm:text-sm uppercase tracking-wider bg-brand-100 px-3.5 py-1.5 rounded-full inline-block mb-3">
+                        Soluciones a Medida
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight uppercase">
+                        ¿A QUIÉN AYUDAMOS?
+                    </h2>
+                    <p class="mt-3 text-base sm:text-lg text-slate-600">
+                        Atendemos requerimientos específicos garantizando continuidad de servicio, seguridad eléctrica y confiabilidad hidráulica.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 lg:gap-10">
+                    
+                    <!-- Tarjeta 1: Edificios y Condominios Residenciales -->
+                    <div class="bg-white rounded-2xl p-7 sm:p-9 shadow-lg border border-slate-200 card-hover-effect flex flex-col justify-between relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-brand-50 rounded-bl-full -z-0"></div>
+                        
+                        <div class="relative z-10 space-y-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-14 h-14 bg-brand-900 text-white rounded-2xl flex items-center justify-center shadow-md shrink-0">
+                                    <svg class="w-7 h-7 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <span class="text-xs font-bold text-brand-800 uppercase tracking-wider">Sector Residencial</span>
+                                    <!-- Title Exact Requirement -->
+                                    <h3 class="text-xl sm:text-2xl font-bold text-slate-900">Edificios y Condominios Residenciales</h3>
+                                </div>
+                            </div>
+
+                            <!-- Textual Exact Requirement -->
+                            <div class="bg-rose-50 border-l-4 border-rose-500 p-4 rounded-r-xl">
+                                <p class="text-sm sm:text-base font-semibold text-rose-900 flex items-start gap-2">
+                                    <svg class="w-5 h-5 text-rose-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                                    <span>¿Problemas de presión de agua, cortes o cableado defectuoso?</span>
+                                </p>
+                            </div>
+
+                            <!-- Textual Exact Requirement -->
+                            <div class="bg-slate-50 p-5 rounded-xl border border-slate-200/80 space-y-3">
+                                <h4 class="font-extrabold text-sm text-brand-900 uppercase tracking-wider flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                    Solución:
+                                </h4>
+                                <p class="text-sm sm:text-base text-slate-700 leading-relaxed font-medium">
+                                    Mantenimiento preventivo de tableros alternadores, sistemas de presión constante e instalaciones eléctricas domiciliarias seguras.
+                                </p>
+                            </div>
+
+                            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-600 pt-2">
+                                <li class="flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-brand-800"></span>
+                                    Garantía de suministro continuo de agua en horas pico de consumo.
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-brand-800"></span>
+                                    Protección contra sobrecargas que dañan electrodomésticos de propietarios.
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-brand-800"></span>
+                                    Informes técnicos detallados para Juntas de Propietarios y Administraciones.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="pt-8 relative z-10 border-t border-slate-100 mt-6">
+                            <a href="https://wa.me/51999999999?text=Hola,%20soy%20administrador/residente%20de%20un%20edificio.%20Necesito%20cotizar%20mantenimiento." 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="w-full inline-flex items-center justify-center gap-2 bg-brand-900 hover:bg-brand-800 text-white font-bold py-3.5 px-6 rounded-xl transition-colors shadow-sm text-sm">
+                                <span>Solicitar Evaluación para Edificio</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 2: Pequeña y Mediana Industria / Oficinas -->
+                    <div class="bg-white rounded-2xl p-7 sm:p-9 shadow-lg border border-slate-200 card-hover-effect flex flex-col justify-between relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-slate-100 rounded-bl-full -z-0"></div>
+
+                        <div class="relative z-10 space-y-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-14 h-14 bg-brand-600 text-white rounded-2xl flex items-center justify-center shadow-md shrink-0">
+                                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <span class="text-xs font-bold text-brand-600 uppercase tracking-wider">Sector Comercial e Industrial</span>
+                                    <!-- Title Exact Requirement -->
+                                    <h3 class="text-xl sm:text-2xl font-bold text-slate-900">Pequeña y Mediana Industria / Oficinas</h3>
+                                </div>
+                            </div>
+
+                            <!-- Textual Exact Requirement -->
+                            <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-xl">
+                                <p class="text-sm sm:text-base font-semibold text-amber-900 flex items-start gap-2">
+                                    <svg class="w-5 h-5 text-amber-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                                    <span>¿Necesitas asegurar la continuidad de tus máquinas y redes?</span>
+                                </p>
+                            </div>
+
+                            <!-- Textual Exact Requirement -->
+                            <div class="bg-slate-50 p-5 rounded-xl border border-slate-200/80 space-y-3">
+                                <h4 class="font-extrabold text-sm text-brand-900 uppercase tracking-wider flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                    Solución:
+                                </h4>
+                                <p class="text-sm sm:text-base text-slate-700 leading-relaxed font-medium">
+                                    Armado de tableros de fuerza, automatización de procesos puntuales y cableado estructurado para redes de internet estables.
+                                </p>
+                            </div>
+
+                            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-600 pt-2">
+                                <li class="flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-brand-600"></span>
+                                    Reducción de paradas no programadas en líneas de producción.
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-brand-600"></span>
+                                    Puntos de red ordenados, identificados y con mínima latencia de datos.
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-brand-600"></span>
+                                    Mantenimiento programado nocturno o de fin de semana sin interferir operativamente.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="pt-8 relative z-10 border-t border-slate-100 mt-6">
+                            <a href="https://wa.me/51999999999?text=Hola,%20tengo%20una%20empresa/oficina.%20Requiero%20cotizar%20servicio%20t%C3%A9cnico." 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="w-full inline-flex items-center justify-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-bold py-3.5 px-6 rounded-xl transition-colors shadow-sm text-sm">
+                                <span>Solicitar Evaluación para Empresa</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SECCIÓN: NUESTROS SERVICIOS (Grid de 6 tarjetas con íconos) -->
+        <section id="servicios" class="py-16 sm:py-24 bg-white border-b border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-brand-800 font-extrabold text-xs sm:text-sm uppercase tracking-wider bg-brand-50 px-3.5 py-1.5 rounded-full inline-block mb-3 border border-brand-100">
+                        Especialización Técnica
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight uppercase">
+                        NUESTROS SERVICIOS
+                    </h2>
+                    <p class="mt-3 text-base sm:text-lg text-slate-600">
+                        Cobertura integral con personal calificado, instrumentación de prueba y estándares normativos vigentes.
+                    </p>
+                </div>
+
+                <!-- Grid de 6 tarjetas (1 col en móvil, 2 o 3 en PC) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                    
+                    <!-- Servicio 1: Mantenimiento de Electrobombas -->
+                    <div class="bg-slate-50/90 rounded-2xl p-7 border border-slate-200/80 card-hover-effect flex flex-col justify-between group">
+                        <div class="space-y-4">
+                            <div class="w-14 h-14 bg-gradient-to-br from-brand-900 to-brand-800 text-white rounded-2xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
+                                <svg class="w-7 h-7 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                            </div>
+                            <!-- Servicio 1 Text Requirement -->
+                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-600 transition-colors">
+                                Servicio 1: Mantenimiento de Electrobombas.
+                            </h3>
+                            <p class="text-sm text-slate-600 leading-relaxed font-normal">
+                                Revisión integral de motores, contactores, relés y presostatos.
+                            </p>
+                        </div>
+                        <div class="pt-6 border-t border-slate-200/60 mt-6">
+                            <span class="text-xs font-semibold text-brand-800 flex items-center gap-1">
+                                <span>Preventivo y Correctivo</span>
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 2: Sistemas de Presión Constante -->
+                    <div class="bg-slate-50/90 rounded-2xl p-7 border border-slate-200/80 card-hover-effect flex flex-col justify-between group">
+                        <div class="space-y-4">
+                            <div class="w-14 h-14 bg-gradient-to-br from-brand-900 to-brand-800 text-white rounded-2xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
+                                <svg class="w-7 h-7 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                </svg>
+                            </div>
+                            <!-- Servicio 2 Text Requirement -->
+                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-600 transition-colors">
+                                Servicio 2: Sistemas de Presión Constante.
+                            </h3>
+                            <p class="text-sm text-slate-600 leading-relaxed font-normal">
+                                Instalación y parametrización de variadores de frecuencia para ahorro de energía.
+                            </p>
+                        </div>
+                        <div class="pt-6 border-t border-slate-200/60 mt-6">
+                            <span class="text-xs font-semibold text-brand-800 flex items-center gap-1">
+                                <span>Optimización Energética</span>
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 3: Armado de Tableros Eléctricos -->
+                    <div class="bg-slate-50/90 rounded-2xl p-7 border border-slate-200/80 card-hover-effect flex flex-col justify-between group">
+                        <div class="space-y-4">
+                            <div class="w-14 h-14 bg-gradient-to-br from-brand-900 to-brand-800 text-white rounded-2xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
+                                <svg class="w-7 h-7 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
+                                </svg>
+                            </div>
+                            <!-- Servicio 3 Text Requirement -->
+                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-600 transition-colors">
+                                Servicio 3: Armado de Tableros Eléctricos.
+                            </h3>
+                            <p class="text-sm text-slate-600 leading-relaxed font-normal">
+                                Ensamblaje y reparación de tableros de baja tensión industrial y comercial.
+                            </p>
+                        </div>
+                        <div class="pt-6 border-t border-slate-200/60 mt-6">
+                            <span class="text-xs font-semibold text-brand-800 flex items-center gap-1">
+                                <span>Norma CNE Industrial</span>
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 4: Instalaciones Eléctricas Domiciliarias -->
+                    <div class="bg-slate-50/90 rounded-2xl p-7 border border-slate-200/80 card-hover-effect flex flex-col justify-between group">
+                        <div class="space-y-4">
+                            <div class="w-14 h-14 bg-gradient-to-br from-brand-900 to-brand-800 text-white rounded-2xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
+                                <svg class="w-7 h-7 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                                </svg>
+                            </div>
+                            <!-- Servicio 4 Text Requirement -->
+                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-600 transition-colors">
+                                Servicio 4: Instalaciones Eléctricas Domiciliarias.
+                            </h3>
+                            <p class="text-sm text-slate-600 leading-relaxed font-normal">
+                                Cableado general, tableros de distribución, iluminación y tomacorrientes bajo norma.
+                            </p>
+                        </div>
+                        <div class="pt-6 border-t border-slate-200/60 mt-6">
+                            <span class="text-xs font-semibold text-brand-800 flex items-center gap-1">
+                                <span>Seguridad y Confort</span>
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 5: Redes y Conectividad Ethernet -->
+                    <div class="bg-slate-50/90 rounded-2xl p-7 border border-slate-200/80 card-hover-effect flex flex-col justify-between group">
+                        <div class="space-y-4">
+                            <div class="w-14 h-14 bg-gradient-to-br from-brand-900 to-brand-800 text-white rounded-2xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
+                                <svg class="w-7 h-7 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16l2.879-2.879m0 0a3 3 0 104.243-4.242 3 3 0 00-4.243 4.242zM21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <!-- Servicio 5 Text Requirement -->
+                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-600 transition-colors">
+                                Servicio 5: Redes y Conectividad Ethernet.
+                            </h3>
+                            <p class="text-sm text-slate-600 leading-relaxed font-normal">
+                                Instalación, reparación de puntos de internet y cableado estructurado para oficinas y hogares.
+                            </p>
+                        </div>
+                        <div class="pt-6 border-t border-slate-200/60 mt-6">
+                            <span class="text-xs font-semibold text-brand-800 flex items-center gap-1">
+                                <span>Alta Velocidad y Orden</span>
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 6: Diagnóstico de Fallas -->
+                    <div class="bg-slate-50/90 rounded-2xl p-7 border border-slate-200/80 card-hover-effect flex flex-col justify-between group">
+                        <div class="space-y-4">
+                            <div class="w-14 h-14 bg-gradient-to-br from-brand-900 to-brand-800 text-white rounded-2xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
+                                <svg class="w-7 h-7 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                </svg>
+                            </div>
+                            <!-- Servicio 6 Text Requirement -->
+                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-600 transition-colors">
+                                Servicio 6: Diagnóstico de Fallas.
+                            </h3>
+                            <p class="text-sm text-slate-600 leading-relaxed font-normal">
+                                Identificación rápida de fugas a tierra, cortocircuitos o caídas de red en campo.
+                            </p>
+                        </div>
+                        <div class="pt-6 border-t border-slate-200/60 mt-6">
+                            <span class="text-xs font-semibold text-brand-800 flex items-center gap-1">
+                                <span>Detección Inmediata</span>
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="mt-14 text-center">
+                    <a href="https://wa.me/51999999999?text=Hola,%20vi%20sus%20servicios%20y%20necesito%20una%20visita%20t%C3%A9cnica." 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="inline-flex items-center gap-3 bg-brand-900 hover:bg-brand-800 text-white font-bold py-3.5 px-8 rounded-xl transition-all shadow-md hover:shadow-lg text-sm sm:text-base">
+                        <span>📲 Solicitar Diagnóstico de Cualquiera de Estos Servicios</span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 4. SECCIÓN: NUESTRO MÉTODO DE TRABAJO (Proceso en 3 pasos) -->
+        <section id="metodo" class="py-16 sm:py-24 bg-slate-900 text-white border-b border-slate-800 relative overflow-hidden">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-72 bg-brand-600/10 blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-brand-300 font-extrabold text-xs sm:text-sm uppercase tracking-wider bg-brand-950 px-3.5 py-1.5 rounded-full inline-block mb-3 border border-brand-800">
+                        Proceso Transparente
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight uppercase">
+                        NUESTRO MÉTODO DE TRABAJO
+                    </h2>
+                    <p class="mt-3 text-base sm:text-lg text-slate-300">
+                        Flujo estructurado sin sorpresas en presupuesto ni retrasos operativos.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 relative">
+                    
+                    <!-- Paso 1 -->
+                    <div class="bg-slate-800/80 rounded-2xl p-8 border border-slate-700/80 relative z-10 flex flex-col justify-between hover:border-brand-500 transition-colors">
+                        <div>
+                            <div class="flex items-center justify-between mb-6">
+                                <span class="w-12 h-12 bg-brand-600 text-white rounded-xl flex items-center justify-center font-extrabold text-lg shadow-lg">
+                                    01
+                                </span>
+                                <span class="text-xs font-mono text-brand-300 bg-brand-950/80 px-2.5 py-1 rounded border border-brand-800">FASE INICIAL</span>
+                            </div>
+                            <!-- Paso 1 Exact Text Requirement -->
+                            <h3 class="text-xl font-bold text-white mb-3">
+                                Paso 1: Visita Técnica y Diagnóstico.
+                            </h3>
+                            <p class="text-sm text-slate-300 leading-relaxed font-normal">
+                                Levantamiento de información exhaustivo en tus instalaciones.
+                            </p>
+                        </div>
+                        <div class="pt-6 border-t border-slate-700/60 mt-6 text-xs text-slate-400">
+                            ✓ Evaluación visual, mediciones y detección exacta de causa raíz.
+                        </div>
+                    </div>
+
+                    <!-- Paso 2 -->
+                    <div class="bg-slate-800/80 rounded-2xl p-8 border border-slate-700/80 relative z-10 flex flex-col justify-between hover:border-brand-500 transition-colors">
+                        <div>
+                            <div class="flex items-center justify-between mb-6">
+                                <span class="w-12 h-12 bg-brand-600 text-white rounded-xl flex items-center justify-center font-extrabold text-lg shadow-lg">
+                                    02
+                                </span>
+                                <span class="text-xs font-mono text-brand-300 bg-brand-950/80 px-2.5 py-1 rounded border border-brand-800">EVALUACIÓN</span>
+                            </div>
+                            <!-- Paso 2 Exact Text Requirement -->
+                            <h3 class="text-xl font-bold text-white mb-3">
+                                Paso 2: Propuesta Técnica y Económica.
+                            </h3>
+                            <p class="text-sm text-slate-300 leading-relaxed font-normal">
+                                Cotización clara, directa y detallando los repuestos y la mano de obra.
+                            </p>
+                        </div>
+                        <div class="pt-6 border-t border-slate-700/60 mt-6 text-xs text-slate-400">
+                            ✓ Transparencia total sin costos ocultos antes de iniciar cualquier labor.
+                        </div>
+                    </div>
+
+                    <!-- Paso 3 -->
+                    <div class="bg-slate-800/80 rounded-2xl p-8 border border-slate-700/80 relative z-10 flex flex-col justify-between hover:border-brand-500 transition-colors">
+                        <div>
+                            <div class="flex items-center justify-between mb-6">
+                                <span class="w-12 h-12 bg-accent-green text-white rounded-xl flex items-center justify-center font-extrabold text-lg shadow-lg">
+                                    03
+                                </span>
+                                <span class="text-xs font-mono text-emerald-300 bg-emerald-950/80 px-2.5 py-1 rounded border border-emerald-800">EJECUCIÓN</span>
+                            </div>
+                            <!-- Paso 3 Exact Text Requirement -->
+                            <h3 class="text-xl font-bold text-white mb-3">
+                                Paso 3: Ejecución Programada.
+                            </h3>
+                            <p class="text-sm text-slate-300 leading-relaxed font-normal">
+                                Realizamos el trabajo en el horario que mejor se ajuste a tu operación.
+                            </p>
+                        </div>
+                        <div class="pt-6 border-t border-slate-700/60 mt-6 text-xs text-slate-400">
+                            ✓ Entrega de acta de conformidad, pruebas finales y garantía técnica.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. SECCIÓN: EXPERIENCIA Y GARANTÍA (Perfil Técnico) -->
+        <section id="experiencia" class="py-16 sm:py-24 bg-white border-b border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="bg-gradient-to-br from-brand-950 via-brand-900 to-brand-800 text-white rounded-3xl p-8 sm:p-12 lg:p-14 shadow-2xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 -mr-16 -mt-16 w-80 h-80 bg-brand-500/10 rounded-full blur-2xl"></div>
+
+                    <div class="grid lg:grid-cols-12 gap-10 items-center relative z-10">
+                        
+                        <div class="lg:col-span-4 text-center lg:text-left space-y-4">
+                            <div class="inline-flex items-center gap-2 bg-brand-800/80 text-accent-green text-xs font-extrabold px-3.5 py-1.5 rounded-full border border-brand-700">
+                                <span>🛡️ RESPALDO CERTIFICADO</span>
+                            </div>
+                            <!-- Title Exact Text Requirement -->
+                            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white leading-tight">
+                                Respaldo Técnico de Primer Nivel
+                            </h2>
+                            <div class="pt-2 flex flex-wrap justify-center lg:justify-start gap-3">
+                                <span class="bg-brand-900/90 text-slate-200 text-xs px-3 py-1.5 rounded-lg border border-brand-700 font-semibold">
+                                    +10 Años de Trayectoria
+                                </span>
+                                <span class="bg-brand-900/90 text-slate-200 text-xs px-3 py-1.5 rounded-lg border border-brand-700 font-semibold">
+                                    Certificación CNE
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-8 bg-brand-900/60 p-6 sm:p-8 rounded-2xl border border-brand-700/60 backdrop-blur-sm space-y-6">
+                            <!-- Text Exact Text Requirement -->
+                            <p class="text-base sm:text-lg text-slate-200 leading-relaxed font-normal">
+                                HidroFlux Perú está a cargo de Peter Quispe, ingeniero industrial con más de 10 años manteniendo equipos electromecánicos en empresas de servicios de agua e industrias de manufactura. Contamos con certificaciones especializadas en Sistemas de Presión Constante, Instalaciones Eléctricas y Redes. Todo trabajo se entrega probado y garantizado bajo estrictas normas de seguridad.
+                            </p>
+
+                            <div class="grid sm:grid-cols-2 gap-4 pt-4 border-t border-brand-800 text-xs sm:text-sm">
+                                <div class="flex items-start gap-3">
+                                    <div class="w-6 h-6 rounded-full bg-accent-green/20 text-accent-green flex items-center justify-center shrink-0 mt-0.5">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                    </div>
+                                    <span class="text-slate-300"><strong class="text-white block">Supervisión Profesional:</strong> Control riguroso de parámetros bajo estándares de ingeniería.</span>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="w-6 h-6 rounded-full bg-accent-green/20 text-accent-green flex items-center justify-center shrink-0 mt-0.5">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                    </div>
+                                    <span class="text-slate-300"><strong class="text-white block">Pruebas en Campo:</strong> Verificación con instrumentos de medición calibrados antes de la entrega.</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PREGUNTAS FRECUENTES -->
+        <section class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h3 class="text-xl sm:text-2xl font-bold text-slate-900">Preguntas Frecuentes antes de Contratar</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 mt-1">Resolvemos tus dudas principales al instante</p>
+                </div>
+
+                <div class="space-y-4">
+                    <details class="bg-white rounded-xl border border-slate-200 p-5 shadow-sm group">
+                        <summary class="font-bold text-slate-900 text-sm sm:text-base cursor-pointer flex items-center justify-between list-none">
+                            <span>¿Cómo solicitamos una visita técnica de diagnóstico?</span>
+                            <span class="text-brand-600 group-open:rotate-180 transition-transform">▼</span>
+                        </summary>
+                        <p class="text-xs sm:text-sm text-slate-600 mt-3 leading-relaxed border-t border-slate-100 pt-3">
+                            Puedes hacer clic en cualquiera de los botones de WhatsApp o llamarnos directamente. Coordinamos el horario de visita que mejor convenga a los residentes de tu edificio o al flujo de trabajo de tu empresa.
+                        </p>
+                    </details>
+
+                    <details class="bg-white rounded-xl border border-slate-200 p-5 shadow-sm group">
+                        <summary class="font-bold text-slate-900 text-sm sm:text-base cursor-pointer flex items-center justify-between list-none">
+                            <span>¿Ofrecen comprobantes de pago (Factura / Boleta)?</span>
+                            <span class="text-brand-600 group-open:rotate-180 transition-transform">▼</span>
+                        </summary>
+                        <p class="text-xs sm:text-sm text-slate-600 mt-3 leading-relaxed border-t border-slate-100 pt-3">
+                            Sí, emitimos Facturas electrónicas y Boletas de Venta formales. Todos nuestros servicios se entregan con informe técnico para administración de empresas y condominios.
+                        </p>
+                    </details>
+
+                    <details class="bg-white rounded-xl border border-slate-200 p-5 shadow-sm group">
+                        <summary class="font-bold text-slate-900 text-sm sm:text-base cursor-pointer flex items-center justify-between list-none">
+                            <span>¿Qué alcance tiene la garantía de los trabajos ejecutados?</span>
+                            <span class="text-brand-600 group-open:rotate-180 transition-transform">▼</span>
+                        </summary>
+                        <p class="text-xs sm:text-sm text-slate-600 mt-3 leading-relaxed border-t border-slate-100 pt-3">
+                            Todos nuestros mantenimientos e instalaciones cuentan con garantía escrita de mano de obra y respaldamos la calidad de los repuestos y materiales utilizados.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. FOOTER / CALL TO ACTION FINAL -->
+        <section class="bg-brand-950 text-white py-16 sm:py-24 relative overflow-hidden">
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-brand-600/20 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-8">
+                
+                <div class="inline-flex items-center gap-2 bg-brand-900 border border-brand-700 text-brand-200 text-xs font-bold px-4 py-1.5 rounded-full">
+                    <span class="w-2 h-2 rounded-full bg-accent-green"></span>
+                    <span>ATENCIÓN INMEDIATA Y PROGRAMADA</span>
+                </div>
+
+                <!-- H2 Exact Text Requirement -->
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
+                    No dejes que una falla eléctrica o de red detenga tu edificio o negocio.
+                </h2>
+
+                <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto font-normal">
+                    Evita paradas no programadas, desabastecimiento de agua y riesgos de cortocircuitos. Agenda tu visita técnica hoy mismo.
+                </p>
+
+                <!-- Botón (CTA) Exact Text Requirement -->
+                <div class="pt-4">
+                    <a href="https://wa.me/51999999999?text=Hola,%20vi%20su%20p%C3%A1gina%20web.%20Necesito%20una%20visita%20t%C3%A9cnica." 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="inline-flex items-center justify-center gap-3 bg-accent-green hover:bg-accent-greenHover text-white px-9 py-5 rounded-2xl font-extrabold text-lg sm:text-xl shadow-2xl shadow-accent-green/25 hover:shadow-accent-green/40 transition-all transform hover:-translate-y-1 active:translate-y-0">
+                        <span>💬 Cotizar Servicio por WhatsApp</span>
+                    </a>
+                </div>
+
+                <p class="text-xs text-slate-400 italic">
+                    Respuesta rápida garantizada | Atención en todo Lima Metropolitana y Provincias
+                </p>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER INFO & COPYRIGHT -->
+    <footer class="bg-brand-950 border-t border-brand-900 text-slate-400 text-xs py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 pb-8 border-b border-brand-900">
+                <div>
+                    <span class="font-extrabold text-lg text-white block mb-2 font-sans">HidroFlux <span class="text-brand-500">Perú</span></span>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Servicios especializados en ingeniería, mantenimiento preventivo y correctivo de tableros eléctricos, bombas hidráulicas y conectividad de red.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white text-sm mb-3">Nuestros Servicios Directos</h4>
+                    <ul class="space-y-1.5">
+                        <li><a href="#servicios" class="hover:text-slate-200">Mantenimiento de Electrobombas</a></li>
+                        <li><a href="#servicios" class="hover:text-slate-200">Sistemas de Presión Constante</a></li>
+                        <li><a href="#servicios" class="hover:text-slate-200">Armado de Tableros Eléctricos</a></li>
+                        <li><a href="#servicios" class="hover:text-slate-200">Instalaciones Eléctricas Domiciliarias</a></li>
+                        <li><a href="#servicios" class="hover:text-slate-200">Redes y Conectividad Ethernet</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white text-sm mb-3">Contacto Rápido</h4>
+                    <p class="text-slate-300 font-semibold mb-1">📍 Lima y Callao - Perú</p>
+                    <p class="text-slate-300 font-semibold mb-1">📱 WhatsApp: +51 999 999 999</p>
+                    <p class="text-slate-400 text-xs">🕒 Atención Técnica: Lunes a Domingo</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+                <p>&copy; 2026 HidroFlux Perú. Todos los derechos reservados. Mantenimiento Eléctrico Industrial & Residencial.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-white">Volver arriba ↑</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 3. BOTÓN FLOTANTE DE WHATSAPP SIEMPRE VISIBLE CON ENLACE EXACTO -->
+    <a href="https://wa.me/51999999999?text=Hola,%20vi%20su%20p%C3%A1gina%20web.%20Necesito%20una%20visita%20t%C3%A9cnica." 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Contactar por WhatsApp"
+       class="fixed bottom-6 right-6 z-50 group flex items-center justify-center">
+        <span class="absolute inline-flex h-full w-full rounded-full bg-accent-green opacity-75 animate-ping"></span>
+        <div class="relative w-14 h-14 sm:w-16 sm:h-16 bg-accent-green hover:bg-accent-greenHover text-white rounded-full flex items-center justify-center shadow-2xl transition-transform transform group-hover:scale-110">
+            <svg class="w-8 h-8 sm:w-9 sm:h-9 fill-current" viewBox="0 0 24 24">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+            </svg>
+        </div>
+        <span class="absolute right-20 bg-slate-900 text-white text-xs font-bold px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-xl pointer-events-none hidden sm:block">
+            ¡Agendar por WhatsApp!
+        </span>
+    </a>
+
+    <!-- MOBILE STICKY BOTTOM BAR FOR CONVERSION -->
+    <div class="fixed bottom-0 left-0 right-0 z-40 bg-brand-950 border-t border-brand-800 p-2.5 md:hidden shadow-2xl flex items-center gap-2">
+        <a href="https://wa.me/51999999999?text=Hola,%20vi%20su%20p%C3%A1gina%20web.%20Necesito%20una%20visita%20t%C3%A9cnica." 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="flex-1 bg-accent-green hover:bg-accent-greenHover text-white py-3 px-4 rounded-xl font-extrabold text-sm flex items-center justify-center gap-2 shadow-md">
+            <span>📲 Agendar Visita Técnica</span>
+        </a>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const navLinks = document.querySelectorAll('.mobile-nav-link');
+
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
