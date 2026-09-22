@@ -29,7 +29,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         brand: {
                             50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe',
                             500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8',
-                            800: '#1e40af', 900: '#0f2b5c', 950: '#0b192c',
+                            800: '#1e40af', 900: '#152446', 950: '#0b162c',
                         },
                         accent: {
                             green: '#22c55e', greenHover: '#16a34a', dark: '#1f2937',
@@ -48,8 +48,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
     </script>
     <style>
-        .glass-header { background: rgba(15, 43, 92, 0.95); backdrop-filter: blur(12px); }
-        .hero-gradient { background: linear-gradient(135deg, #0b192c 0%, #0f2b5c 50%, #1e40af 100%); }
+        .glass-header { background: rgba(11, 22, 44, 0.95); backdrop-filter: blur(12px); }
+        .hero-gradient { background: linear-gradient(135deg, #0f1c3a 0%, #172a53 100%); }
         .card-hover-effect { transition: all 0.3s ease; }
         .card-hover-effect:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
         ::-webkit-scrollbar { width: 8px; }
@@ -63,7 +63,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager (noscript) -->
 
     <!-- TOP BAR DE EMERGENCIA -->
-    <div class="bg-brand-950 text-slate-300 text-xs py-2 px-4 border-b border-brand-900">
+    <div class="bg-brand-950 text-slate-300 text-xs py-2 px-4 border-b border-brand-900/50">
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left">
             <div class="flex items-center gap-2">
                 <span class="inline-block w-2 h-2 rounded-full bg-accent-green animate-pulse"></span>
@@ -81,7 +81,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <header class="sticky top-0 z-40 glass-header text-white shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-                <a href="#" class="flex items-center gap-3 bg-white/10 px-3 py-1.5 rounded-lg hover:bg-white/20 transition-colors">
+                <a href="#" class="flex items-center gap-3 bg-white/5 px-3 py-1.5 rounded-lg hover:bg-white/10 transition-colors">
                     <img src="ELEQLOGIX.png" alt="ELEQLOGIX" class="h-10 w-auto object-contain">
                 </a>
                 <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-200">
@@ -101,66 +101,254 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </header>
 
     <main>
-        <!-- 1. HERO SECTION -->
-        <section class="hero-gradient text-white relative pt-16 pb-24 border-b border-brand-900">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
-                <div class="space-y-6 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 bg-brand-800/60 text-brand-100 text-xs px-4 py-1.5 rounded-full border border-brand-500/30">
-                        <span class="text-amber-400">⚡</span> <span class="font-semibold">Servicio de Ingeniería y Automatización en Lima</span>
+        <!-- 1. HERO SECTION ACTUALIZADO -->
+        <section class="hero-gradient text-white relative pt-16 pb-20 border-b border-brand-900 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Columna Izquierda -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left relative z-10 pt-4">
+                    <div class="inline-flex items-center gap-2 bg-brand-800/80 text-brand-100 text-xs px-4 py-1.5 rounded-full border border-brand-600/50">
+                        <span class="text-amber-400 font-bold">⚡</span> <span class="font-semibold">Servicio de Ingeniería y Automatización en Lima</span>
                     </div>
-                    <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight">
-                        Especialistas en Automatización, Tableros de Control y Soluciones Eléctricas.
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-[3.25rem] font-extrabold tracking-tight leading-[1.15]">
+                        Mantenimiento Especializado de Tableros, Electrobombas y Soluciones Eléctricas.
                     </h1>
-                    <p class="text-lg text-slate-300 max-w-xl mx-auto lg:mx-0">
-                        "Optimizamos tus equipos industriales y garantizamos la presión de agua en tu edificio mediante ingeniería de control precisa."
+                    
+                    <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        "Garantizamos la presión de agua en tu edificio y optimizamos tus equipos industriales sin fallas sorpresivas."
                     </p>
-                    <a href="https://wa.me/51999999999?text=Hola,%20necesito%20una%20visita%20t%C3%A9cnica." target="_blank" class="inline-block bg-accent-green hover:bg-accent-greenHover text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl hover:-translate-y-1 transition-transform">
-                        📲 Agendar Visita Técnica
-                    </a>
-                </div>
-                <!-- Right Info Card -->
-                <div class="bg-brand-950/90 border border-brand-800 rounded-2xl p-6 shadow-2xl hidden lg:block">
-                    <h4 class="font-bold text-sm text-brand-200 mb-4 tracking-wide uppercase border-b border-brand-800 pb-2">Centro de Operaciones</h4>
-                    <div class="space-y-4">
-                        <div class="bg-brand-900/60 p-4 rounded-xl border border-brand-800">
-                            <h5 class="font-bold text-white text-sm">Sistemas de Presión Constante</h5>
-                            <p class="text-xs text-slate-300 mt-1">Calibración de variadores y bombas para cero fluctuaciones de agua.</p>
+                    
+                    <div class="pt-2">
+                        <a href="https://wa.me/51999999999?text=Hola,%20necesito%20una%20visita%20t%C3%A9cnica." target="_blank" class="inline-flex items-center justify-center gap-3 bg-accent-green hover:bg-accent-greenHover text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:-translate-y-1 transition-transform">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/></svg>
+                            Agendar Visita Técnica
+                        </a>
+                        <p class="text-[13px] text-slate-300 mt-4 italic max-w-lg mx-auto lg:mx-0">
+                            *Evaluación y diagnóstico en campo adaptado a los horarios de tu edificio o empresa.*
+                        </p>
+                    </div>
+
+                    <!-- Footer del Hero -->
+                    <div class="pt-8 mt-4 border-t border-brand-800/60 flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center lg:justify-start">
+                        <div class="flex items-center gap-3 bg-brand-900/40 py-2 px-3 rounded-lg border border-brand-800/50">
+                            <div class="w-7 h-7 rounded bg-brand-700/80 flex items-center justify-center text-accent-green"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></div>
+                            <span class="text-xs font-semibold text-slate-200 leading-tight">100% Trabajo<br>Garantizado</span>
                         </div>
-                        <div class="bg-brand-900/60 p-4 rounded-xl border border-brand-800">
-                            <h5 class="font-bold text-white text-sm">Tableros de Fuerza y Control</h5>
-                            <p class="text-xs text-slate-300 mt-1">Ingeniería y ensamblaje preventivo contra sobrecargas y cortocircuitos.</p>
+                        <div class="flex items-center gap-3 bg-brand-900/40 py-2 px-3 rounded-lg border border-brand-800/50">
+                            <div class="w-7 h-7 rounded bg-brand-700/80 flex items-center justify-center text-accent-green"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+                            <span class="text-xs font-semibold text-slate-200 leading-tight">Visitas<br>Programadas</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-brand-900/40 py-2 px-3 rounded-lg border border-brand-800/50">
+                            <div class="w-7 h-7 rounded bg-brand-700/80 flex items-center justify-center text-accent-green"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+                            <span class="text-xs font-semibold text-slate-200 leading-tight">Ingeniero & Técnico<br>Titulado</span>
                         </div>
                     </div>
                 </div>
+
+                <!-- Columna Derecha: Tarjeta (Card) -->
+                <div class="lg:col-span-5 relative hidden lg:block">
+                    <!-- Efecto Glow de fondo -->
+                    <div class="absolute -inset-2 bg-gradient-to-r from-brand-500/20 to-accent-green/20 rounded-[2rem] blur-xl opacity-70 animate-pulse-slow"></div>
+                    
+                    <div class="relative bg-[#0b1426] border border-brand-800/70 rounded-2xl p-7 shadow-2xl">
+                        <!-- Cabecera de la tarjeta -->
+                        <div class="flex justify-between items-center mb-6 border-b border-brand-800 pb-4">
+                            <h4 class="font-bold text-xs text-white tracking-widest uppercase w-1/2 leading-snug">CENTRO DE OPERACIONES TÉCNICO</h4>
+                            <span class="bg-brand-700/40 border border-brand-600/50 text-brand-200 text-[10px] font-bold px-3 py-1.5 rounded uppercase tracking-widest">LIMA METROPOLITANA</span>
+                        </div>
+                        
+                        <!-- Lista de servicios -->
+                        <div class="space-y-4">
+                            <!-- Ítem 1 -->
+                            <div class="bg-[#111c38] border border-brand-700/50 p-4 rounded-xl flex gap-4 items-start hover:border-brand-500/50 transition-colors">
+                                <div class="w-9 h-9 rounded bg-brand-800/80 flex items-center justify-center text-brand-300 shrink-0">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-white text-sm">Sistemas de Presión Constante</h5>
+                                    <p class="text-[11px] text-slate-400 mt-1 leading-relaxed">Calibración de variadores de frecuencia y bombas hidráulicas para cero fluctuaciones de agua.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Ítem 2 -->
+                            <div class="bg-[#111c38] border border-brand-700/50 p-4 rounded-xl flex gap-4 items-start hover:border-brand-500/50 transition-colors">
+                                <div class="w-9 h-9 rounded bg-brand-800/80 flex items-center justify-center text-brand-300 shrink-0">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-white text-sm">Tableros de Fuerza y Control</h5>
+                                    <p class="text-[11px] text-slate-400 mt-1 leading-relaxed">Mantenimiento preventivo contra sobrecargas, cortocircuitos y fallas en contactores.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Ítem 3 -->
+                            <div class="bg-[#111c38] border border-brand-700/50 p-4 rounded-xl flex gap-4 items-start hover:border-brand-500/50 transition-colors">
+                                <div class="w-9 h-9 rounded bg-brand-800/80 flex items-center justify-center text-brand-300 shrink-0">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-white text-sm">Redes Ethernet Estables</h5>
+                                    <p class="text-[11px] text-slate-400 mt-1 leading-relaxed">Cableado estructurado industrial y comercial libre de interferencias o caídas de red.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Footer de la tarjeta -->
+                        <div class="mt-6 pt-5 border-t border-brand-800 text-center">
+                            <p class="text-[11px] text-slate-400 mb-1.5">¿Tienes una consulta urgente sobre tu edificio o empresa?</p>
+                            <a href="https://wa.me/51999999999?text=Hola,%20tengo%20una%20urgencia%20t%C3%A9cnica." target="_blank" class="text-accent-green text-xs font-bold hover:underline inline-flex items-center gap-1">
+                                Consultar por WhatsApp inmediatamente &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
         <!-- 2. ¿A QUIÉN AYUDAMOS? -->
-        <section id="a-quien-ayudamos" class="py-16 bg-slate-100 border-b border-slate-200">
+        <section id="a-quien-ayudamos" class="py-16 sm:py-24 bg-slate-50 border-b border-slate-200">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-2xl mx-auto mb-12">
-                    <span class="text-brand-800 font-extrabold text-xs uppercase bg-brand-100 px-3 py-1 rounded-full">Soluciones a Medida</span>
-                    <h2 class="text-3xl font-extrabold text-slate-900 mt-4 mb-2">¿A QUIÉN AYUDAMOS?</h2>
+                
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <span class="text-brand-600 font-bold text-xs sm:text-sm uppercase tracking-wider bg-brand-100 px-4 py-1.5 rounded-full inline-block mb-4">
+                        Soluciones a Medida
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
+                        ¿A QUIÉN AYUDAMOS?
+                    </h2>
+                    <p class="text-base sm:text-lg text-slate-600">
+                        Atendemos requerimientos específicos garantizando continuidad de servicio, seguridad eléctrica y confiabilidad hidráulica.
+                    </p>
                 </div>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <!-- Edificios -->
-                    <div class="bg-white rounded-2xl p-8 shadow-lg border border-slate-200 card-hover-effect">
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">Edificios y Condominios Residenciales</h3>
-                        <p class="text-sm text-slate-600 mb-4">¿Problemas de presión de agua, cortes o cableado defectuoso?</p>
-                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-sm text-slate-700 mb-6">
-                            <strong>Solución:</strong> Mantenimiento preventivo de tableros alternadores y sistemas de presión constante.
+
+                <div class="grid md:grid-cols-2 gap-8 lg:gap-10">
+                    
+                    <!-- Tarjeta 1: Residencial -->
+                    <div class="bg-white rounded-2xl p-7 sm:p-9 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 flex flex-col relative overflow-hidden group">
+                        <!-- Decoración de fondo superior derecha -->
+                        <div class="absolute top-0 right-0 w-48 h-48 bg-brand-50 rounded-bl-full -z-0 transition-transform group-hover:scale-110"></div>
+                        
+                        <div class="relative z-10 flex-grow">
+                            <!-- Header Tarjeta -->
+                            <div class="flex items-start gap-4 mb-8">
+                                <div class="w-14 h-14 bg-brand-950 text-white rounded-xl flex items-center justify-center shadow-md shrink-0">
+                                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                                </div>
+                                <div>
+                                    <span class="text-[11px] font-bold text-brand-600 uppercase tracking-widest block mb-1">Sector Residencial</span>
+                                    <h3 class="text-xl sm:text-2xl font-bold text-slate-900 leading-tight">Edificios y Condominios Residenciales</h3>
+                                </div>
+                            </div>
+
+                            <!-- Problema -->
+                            <div class="bg-rose-50/80 border-l-4 border-rose-500 p-4 rounded-r-xl mb-6">
+                                <p class="text-sm font-semibold text-rose-700 flex items-start gap-2">
+                                    <svg class="w-5 h-5 text-rose-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                                    <span>¿Problemas de presión de agua, cortes o cableado defectuoso?</span>
+                                </p>
+                            </div>
+
+                            <!-- Solución -->
+                            <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 mb-8">
+                                <h4 class="font-bold text-xs text-slate-800 uppercase tracking-wider flex items-center gap-2 mb-2">
+                                    <svg class="w-4 h-4 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                    Solución:
+                                </h4>
+                                <p class="text-sm text-slate-600 leading-relaxed font-medium">
+                                    Mantenimiento preventivo de tableros alternadores, sistemas de presión constante e instalaciones eléctricas domiciliarias seguras.
+                                </p>
+                            </div>
+
+                            <!-- Lista -->
+                            <ul class="space-y-3 text-sm text-slate-600 mb-8">
+                                <li class="flex items-start gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-brand-600 mt-1.5 shrink-0"></span>
+                                    <span>Garantía de suministro continuo de agua en horas pico de consumo.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-brand-600 mt-1.5 shrink-0"></span>
+                                    <span>Protección contra sobrecargas que dañan electrodomésticos de propietarios.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-brand-600 mt-1.5 shrink-0"></span>
+                                    <span>Informes técnicos detallados para Juntas de Propietarios y Administraciones.</span>
+                                </li>
+                            </ul>
                         </div>
-                        <a href="https://wa.me/51999999999?text=Hola,%20soy%20administrador%20y%20necesito%20cotizar." target="_blank" class="w-full block text-center bg-brand-900 hover:bg-brand-800 text-white font-bold py-3 rounded-xl transition">Solicitar para Edificio</a>
-                    </div>
-                    <!-- Industria -->
-                    <div class="bg-white rounded-2xl p-8 shadow-lg border border-slate-200 card-hover-effect">
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">Pequeña y Mediana Industria / Oficinas</h3>
-                        <p class="text-sm text-slate-600 mb-4">¿Necesitas asegurar la continuidad de tus máquinas y procesos?</p>
-                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-sm text-slate-700 mb-6">
-                            <strong>Solución:</strong> Automatización de procesos, armado de tableros de fuerza y cableado estructurado.
+
+                        <!-- Botón -->
+                        <div class="mt-auto relative z-10 pt-4 border-t border-slate-100">
+                            <a href="https://wa.me/51999999999?text=Hola,%20soy%20administrador%20y%20necesito%20cotizar." target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-brand-950 hover:bg-brand-900 text-white font-semibold py-3.5 px-6 rounded-xl transition-colors text-sm">
+                                <span>Solicitar Evaluación para Edificio</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                            </a>
                         </div>
-                        <a href="https://wa.me/51999999999?text=Hola,%20tengo%20una%20empresa%20y%20necesito%20cotizar." target="_blank" class="w-full block text-center bg-brand-600 hover:bg-brand-700 text-white font-bold py-3 rounded-xl transition">Solicitar para Empresa</a>
                     </div>
+
+                    <!-- Tarjeta 2: Comercial -->
+                    <div class="bg-white rounded-2xl p-7 sm:p-9 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 flex flex-col relative overflow-hidden group">
+                        <!-- Decoración de fondo superior derecha -->
+                        <div class="absolute top-0 right-0 w-48 h-48 bg-brand-50 rounded-bl-full -z-0 transition-transform group-hover:scale-110"></div>
+
+                        <div class="relative z-10 flex-grow">
+                            <!-- Header Tarjeta -->
+                            <div class="flex items-start gap-4 mb-8">
+                                <div class="w-14 h-14 bg-brand-600 text-white rounded-xl flex items-center justify-center shadow-md shrink-0">
+                                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                                </div>
+                                <div>
+                                    <span class="text-[11px] font-bold text-brand-600 uppercase tracking-widest block mb-1">Sector Comercial e Industrial</span>
+                                    <h3 class="text-xl sm:text-2xl font-bold text-slate-900 leading-tight">Pequeña y Mediana Industria / Oficinas</h3>
+                                </div>
+                            </div>
+
+                            <!-- Problema -->
+                            <div class="bg-amber-50/80 border-l-4 border-amber-500 p-4 rounded-r-xl mb-6">
+                                <p class="text-sm font-semibold text-amber-700 flex items-start gap-2">
+                                    <svg class="w-5 h-5 text-amber-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                                    <span>¿Necesitas asegurar la continuidad de tus máquinas y redes?</span>
+                                </p>
+                            </div>
+
+                            <!-- Solución -->
+                            <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 mb-8">
+                                <h4 class="font-bold text-xs text-slate-800 uppercase tracking-wider flex items-center gap-2 mb-2">
+                                    <svg class="w-4 h-4 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                    Solución:
+                                </h4>
+                                <p class="text-sm text-slate-600 leading-relaxed font-medium">
+                                    Armado de tableros de fuerza, automatización de procesos puntuales y cableado estructurado para redes de internet estables.
+                                </p>
+                            </div>
+
+                            <!-- Lista -->
+                            <ul class="space-y-3 text-sm text-slate-600 mb-8">
+                                <li class="flex items-start gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-brand-600 mt-1.5 shrink-0"></span>
+                                    <span>Reducción de paradas no programadas en líneas de producción.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-brand-600 mt-1.5 shrink-0"></span>
+                                    <span>Puntos de red ordenados, identificados y con mínima latencia de datos.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-brand-600 mt-1.5 shrink-0"></span>
+                                    <span>Mantenimiento programado nocturno o de fin de semana sin interferir operativamente.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Botón -->
+                        <div class="mt-auto relative z-10 pt-4 border-t border-slate-100">
+                            <a href="https://wa.me/51999999999?text=Hola,%20tengo%20una%20empresa%20y%20necesito%20cotizar." target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-semibold py-3.5 px-6 rounded-xl transition-colors text-sm">
+                                <span>Solicitar Evaluación para Empresa</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
